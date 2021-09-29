@@ -1,0 +1,1 @@
+!function(){var a=window.localStorage&&window.localStorage.bjx_guess_index||0;function e(){var e=$(".bjx-guess .head a").data("max")||0;a=+a,(e=+e)&&e<=a?a=1:a+=1,$.get("/api/section/bjx_guess/",{index:a},function(e){-1!==e.indexOf("<")?$(".bjx-guess").replaceWith(e):a=0,window.localStorage.bjx_guess_index=a})}e(),$(".right").on("click",".bjx-guess .head a",function(){e()})}();
